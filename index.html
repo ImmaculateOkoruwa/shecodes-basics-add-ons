@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Traveling - My hobby</title>
+    <style>
+      body {
+        background: linear-gradient(
+          114.2deg,
+          rgb(121, 194, 243) 22.6%,
+          rgb(255, 180, 239) 67.7%
+        );
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      h2 {
+        text-align: center;
+      }
+
+      img {
+        max-width: 100%;
+      }
+
+      button {
+        display: block;
+        margin: 0 auto;
+        border: 1px solid plum;
+        background: white;
+        font-size: 20px;
+        border-radius: 6px;
+        padding: 10px 15px;
+        transition: all 150ms ease-in-out;
+      }
+
+      button:hover {
+        background: plum;
+        cursor: pointer;
+      }
+      .container {
+        max-width: 600px;
+        margin: 20px auto;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+      }
+
+      footer {
+        text-align: center;
+        margin: 10px 0;
+        font-size: 18px;
+      }
+      p {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+
+      .theme-button {
+        font-size: 10px;
+        background: black;
+        color: white;
+        padding: 5 8px;
+      }
+
+      .theme-button:hover {
+        color: black;
+        background: white;
+      }
+      .traveling-intro-image {
+        border-radius: 10px;
+        transition: all 150ms ease-in-out;
+      }
+
+      .traveling-intro-image :hover {
+        filter: contrast(80%);
+        transform: scale(1.1);
+      }
+      .grid {
+        margin: 15px 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 20px;
+      }
+
+      .grid img {
+        width: 100%;
+        border-radius: 8px;
+        transition: all 150ms ease-in-out;
+      }
+
+      .grid img:hover {
+        transform: scale(2);
+      }
+      .dark {
+        background: linear-gradient(to right, #434343 0%, black 100%);
+        color: white;
+      }
+
+      .dark .container {
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      .dark a {
+        color: plum;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="theme-button">Change theme</button>
+    <div class="container">
+      <h1>Traveling 🌎</h1>
+      <h2>My Favorite hobby</h2>
+      <div class="traveling-intro-image">
+        <a href="https://www.allinclusiveoutlet.com/deals" target="_blank">
+          <img
+            src="https://1.bp.blogspot.com/-V5yOcwW9-5o/YKMosIX3SLI/AAAAAAAAEXM/UvjbF_iTpcwrkW3Fm1QLG2CWp1fghh6XgCLcBGAsYHQ/s1200/6%2B%25281%2529.jpg"
+            alt="" />
+        </a>
+      </div>
+      <div class="grid">
+        <img
+          src="https://www.savoredjourneys.com/wp-content/uploads/2015/08/abu-dhabi-city-guide-feature.jpg"
+          alt="Abu Dhabi, UAT" />
+        <img
+          src="https://www.travelandleisure.com/thmb/-oLKd48wjyHpBHLpmuIwOYIq5_E=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/houston-texas-HTXTG0221-7e22cd4db19f46d7820fa124e25d4d75.jpg"
+          alt="Houston, Texas" />
+        <img
+          src="https://images.contentstack.io/v3/assets/blt00454ccee8f8fe6b/blt2829800627e04bee/6139d918aa183b2c785b5d2f/US_Tennessee_US_Header.jpg?width=1680&quality=70&auto=webp"
+          alt="Tennessee" />
+        <img
+          src="https://assets.traveltriangle.com/blog/wp-content/uploads/2018/08/big-ben.jpg"
+          alt="Nottingham, United Kingdom" />
+      </div>
+
+      <p>
+        Traveling is an engaging hobby involving exploring different
+        destinations to experience diverse cultures, cuisines, and activities.
+        It offers an escape from routine, fostering personal growth and a
+        broader perspective on the world. I have shared a snapshot of some of
+        the places I have visited around the world and some information on where
+        to get the best deals.
+        <br /><br />
+        📖
+        <a href="https://www.allinclusiveoutlet.com/deals" target="_blank">
+          <strong> Best Touristic Site Deals </strong>
+        </a>
+      </p>
+
+      <button id="order-button" class="order-button">Learn more</button>
+    </div>
+
+    <footer>
+      <p>
+        ✌️ This website was coded by Immaculate Okoruwa, and is
+        <a
+          href="https://github.com/ImmaculateOkoruwa"
+          target="_blank"
+          title="My Hobby Landing Page">
+          open-sourced
+        </a>
+      </p>
+    </footer>
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+        body.classList.toggle("dark");
+      }
+      function order() {
+        let quanty = prompt("Do you love traveling?");
+        let name = prompt("What is your first name?");
+        let email = prompt("What is your email?");
+
+        alert(
+          "Thanks " +
+            name +
+            "! I'll be in touch soon with more details. Feel free to contact me if you have any questions icokoruwa@gmail.com"
+        );
+      }
+
+      let button = document.querySelector("#order-button");
+      button.addEventListener("click", order);
+
+      let themeButton = document.querySelector(".theme-button");
+      themeButton.addEventListener("click", changeTheme);
+    </script>
+  </body>
+</html>
